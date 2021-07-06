@@ -21,38 +21,60 @@ html {
 *::before {
   box-sizing: inherit;
 }
-
 body {
-  background-color: #ffffff;
+  padding: 0;
   margin: 0;
+  min-height: 100%;
+}
+.overlay {
+  position: absolute;
+  height: 100vh;
   width: 320px;
-  left: 0;
+  background-color: #ffffff;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
-  min-height: 100vh;
+  filter: blur(5px);
+  z-index: -1;
+}
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 99vh;
 }
 .header {
+  width: 320px;
   padding: 0;
-  min-height: 88px;
-  display: flex;
-  justify-content: flex-start;
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
 }
-
+.content {
+  flex-grow: 1;
+  margin-top: 30px;
+}
+.logo {
+  height: 51px;
+  margin-top: 16px;
+  margin-left: 16px;
+}
 .button {
   padding: 0;
   border: none;
   background-color: inherit;
 }
 .menu-button-open {
-  margin: 0 16px 0 24px;
+  margin-left: 24px;
 }
 .search-button {
-  margin-left: 78px;
+  justify-self: end;
+  margin-right: 24px;
 }
 
 menu {
   margin: 0;
   padding: 0;
 }
+
 .side-navigation {
   list-style: none;
   font-family: TTLakes-Regular, sans-serif;
@@ -60,35 +82,34 @@ menu {
   line-height: 24px;
 }
 
+.side-navigation__list {
+  height: 58px;
+  display: flex;
+  padding: 16px 0;
+}
+
 .side-navigation__link {
   display: block;
-  padding-top: 32px;
   margin-left: 24px;
   color: #1b1c21;
   text-decoration: none;
 }
 
-.side-navigation__link--active::before {
+.side-navigation__list--active::before {
   content: url(asserts/img/highlight--side-menu.svg);
-  position: relative;
-  left: -20px;
-  top: 10px;
+  align-self: center;
 }
 
 .side-navigation__link--active {
   color: #7e7e82;
-  margin-left: 20px;
 }
 
 .side-navigation__link:hover {
   color: #7e7e82;
 }
 
-.content {
-  min-height: calc(100vh - 250px);
-  margin-bottom: 20px;
-}
-footer {
+.footer {
+  margin-top: 20px;
   margin-left: 24px;
 }
 .footer__button {
@@ -137,8 +158,12 @@ footer {
   color: #7e7e82;
 }
 
-button:not(.logo-button):hover {
+button:hover {
   filter: hue-rotate(-105deg);
   transform: scale(1.5);
   transition: ease 1s;
+}
+
+.click {
+  cursor: pointer;
 }

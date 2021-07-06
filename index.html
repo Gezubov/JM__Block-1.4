@@ -10,71 +10,78 @@
 </head>
 
 <body>
-    <div class="content">
+    <div class="overlay">
+
+    </div>
+    <div class="side-menu">
         <header class="header">
 
-            <button class="button menu-button-open" type="button">
+            <button class=" header__button button menu-button-open click" type="button">
                 <img src="asserts/img/btn-burger-open.svg" alt="Меню">
             </button>
 
-            <button class="button logo-button" type="button">
-                <img src="asserts/img/logo.svg" alt="Логотип">
-            </button>
+            <img class ="logo" src="asserts/img/logo.svg" alt="Логотип">
 
-            <button class="button search-button" type="button">
+            <button class="header__button button search-button click" type="button">
                 <img src="asserts/img/search.svg" alt="Поиск">
             </button>
 
         </header>
+        
+        <div class="content">
 
-        <nav>
-            <menu class="side-navigation">
-                <li><a href="#" class="side-navigation__link side-navigation__link--active">Ремонт техники</a></li>
-                <li><a href="#" class="side-navigation__link">Услуги и сервисы</a></li>
-                <li><a href="#" class="side-navigation__link">Корпоративным клиентам</a></li>
-                <li><a href="#" class="side-navigation__link">Продавцам техники</a></li>
-                <li><a href="#" class="side-navigation__link">Партнерам</a></li>
-                <li><a href="#" class="side-navigation__link">Производителям</a></li>
-                <li><a href="#" class="side-navigation__link">Наши сервисные центры</a></li>
-                <li><a href="#" class="side-navigation__link">Контакты</a></li>
-            </menu>
-        </nav>
+            <nav>
+                <menu class="side-navigation">
+                    <li class="side-navigation__list side-navigation__list--active click"><a href="#" class="side-navigation__link side-navigation__link--active">Ремонт техники</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Услуги и сервисы</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Корпоративным клиентам</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Продавцам техники</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Партнерам</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Производителям</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Наши сервисные центры</a></li>
+                    <li class="side-navigation__list click"><a href="#" class="side-navigation__link">Контакты</a></li>
+                </menu>
+            </nav> 
+
+        </div>
+        
+        <footer class="footer">
+
+            <button class="button footer__button call-button click" type="button">
+                <img src="asserts/img/call.svg" alt="Позвонить">
+            </button>
+
+            <button class="button footer__button chat-button click" type="button">
+                <img src="asserts/img/chat.svg" alt="Открыть чат">
+            </button>
+
+            <button class="button footer__button profile-button click" type="button">
+                <img src="asserts/img/profile.svg" alt="Открыть профиль">
+            </button>
+
+            <div class="contacts">
+                <a class="contacts__mail click" href="mailto:mail@cps.com">mail@cps.com</a>
+                <a class="contacts__phone click" href="tel:+88008908900">8 800 890 8900</a>
+            </div>
+
+            <div class="lang">
+                <label class = "lang__check lang__ru lang__active click" for="ru">
+                    <p>RU</p>
+                    <input class = "lang__input" type="checkbox" name="ru" id="ru">
+                </label>
+                <label class = "lang__check lang__en click" for="ru">
+                    <p>EN</p>
+                    <input class = "lang__input" type="checkbox" name="en" id="en">
+                </label>
+                <label class = "lang__check lang__ch click"for="ru">
+                    <p>CH</p>
+                    <input class = "lang__input" type="checkbox" name="CH" id="CH">
+                </label>
+            </div>
+        
+        </footer>
     </div>
-    <footer>
 
-        <button class="button footer__button call-button" type="button">
-            <img src="asserts/img/call.svg" alt="Позвонить">
-        </button>
-
-        <button class="button footer__button chat-button" type="button">
-            <img src="asserts/img/chat.svg" alt="Открыть чат">
-        </button>
-
-        <button class="button footer__button profile-button" type="button">
-            <img src="asserts/img/profile.svg" alt="Открыть профиль">
-        </button>
-
-        <div class="contacts">
-            <a class="contacts__mail" href="mailto:mail@cps.com">mail@cps.com</a>
-            <a class="contacts__phone" href="tel:+88008908900">8 800 890 8900</a>
-        </div>
-
-        <div class="lang">
-            <label class = "lang__check lang__ru lang__active" for="ru">
-                <p>RU</p>
-                <input class = "lang__input" type="checkbox" name="ru" id="ru">
-            </label>
-            <label class = "lang__check lang__en" for="ru">
-                <p>EN</p>
-                <input class = "lang__input" type="checkbox" name="en" id="en">
-            </label>
-            <label class = "lang__check lang__ch"for="ru">
-                <p>CH</p>
-                <input class = "lang__input" type="checkbox" name="CH" id="CH">
-            </label>
-        </div>
-
-    </footer>
 </body>
 
 </html>
